@@ -56,7 +56,7 @@ step_gallery() {
 
     echo "==> Building gallery HTML via ${DOCKER_IMAGE}..."
     docker run --rm \
-        --entrypoint python \
+        --entrypoint sh \
         -v "${WORKSPACE}:/workspace" \
         -v "${ACTION_PATH}:/action:ro" \
         -e ACTION_PATH=/action \
@@ -66,7 +66,7 @@ step_gallery() {
         -e GITHUB_SERVER_URL="${GITHUB_SERVER_URL:-}" \
         -w /workspace \
         "${DOCKER_IMAGE}" \
-        /action/scripts/build_gallery.py
+        -c "git config --global --add safe.directory /workspace && python /action/scripts/build_gallery.py"
 }
 
 case "${1:-build}" in

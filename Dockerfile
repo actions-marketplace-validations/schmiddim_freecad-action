@@ -37,6 +37,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libxi6 \
         libxrender1 \
         libxrandr2 \
+        git \
         openscad \
         xvfb \
         xauth \
