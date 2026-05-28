@@ -56,7 +56,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build Gallery
-        uses: schmiddim/freecad-action@v2
+        uses: schmiddim/freecad-action@v3
 
       - uses: actions/configure-pages@v6
 
@@ -116,7 +116,7 @@ Models without metadata are still displayed with a 3D preview and a hint showing
 Edit `cad-gallery.yaml` to configure paths and the gallery title:
 
 ```yaml
-# yaml-language-server: $schema=https://raw.githubusercontent.com/schmiddim/freecad-action/refs/tags/v2.8.9/schemas/cad-gallery.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/schmiddim/freecad-action/refs/tags/v3.0.0/schemas/cad-gallery.schema.json
 title: "My 3D Models"          # Optional, default: "CAD Gallery"
 freecad_dir: "freecad-files"   # Where your .FCStd files are
 metadata_dir: "metadata"       # Where metadata YAMLs and images are
@@ -131,7 +131,7 @@ If your `.FCStd` files are in the repo root, set `freecad_dir: "."`.
 Create a `maker.yaml` in your repo root to enable the About-page and add your profile links to the navigation:
 
 ```yaml
-# yaml-language-server: $schema=https://raw.githubusercontent.com/schmiddim/freecad-action/refs/tags/v2.8.9/schemas/maker.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/schmiddim/freecad-action/refs/tags/v3.0.0/schemas/maker.schema.json
 name: "Your Name"
 bio: "Short description about you."
 links:
@@ -162,7 +162,7 @@ By default, your gallery is standalone and does not communicate with any externa
 
 ```yaml
 - name: Build Gallery
-  uses: schmiddim/freecad-action@v2
+  uses: schmiddim/freecad-action@v3
   with:
     send-ping: 'true'
 ```
@@ -191,9 +191,9 @@ When enabled, the action sends a `POST` request after each successful build cont
 ### Version Pinning
 
 ```yaml
-uses: schmiddim/freecad-action@v2       # Latest 2.x (recommended)
-uses: schmiddim/freecad-action@v2.8     # Latest 2.8.x
-uses: schmiddim/freecad-action@v2.8.9   # Exact version
+uses: schmiddim/freecad-action@v3       # Latest 3.x (recommended)
+uses: schmiddim/freecad-action@v3.0     # Latest 3.0.x
+uses: schmiddim/freecad-action@v3.0.0   # Exact version
 ```
 
 ### Custom Templates (Optional)

@@ -65,10 +65,10 @@ make validate
 ## Release process
 
 1. Commit with conventional commits (`feat:`, `fix:`, `refactor:`)
-2. Create annotated tag: `git tag -a v2.X.0 -m "Release v2.X.0 ..."`
-3. Push commit + tag: `git push master master && git push master v2.X.0`
+2. Create annotated tag: `git tag -a v3.X.0 -m "Release v3.X.0 ..."`
+3. Push commit + tag: `git push master master && git push master v3.X.0`
 4. CI does the rest:
-   - `release.yaml` creates GitHub Release with auto-generated notes + moving tags (`v2`, `v2.X`)
+   - `release.yaml` creates GitHub Release with auto-generated notes + moving tags (`v3`, `v3.X`)
    - `docker-publish.yaml` rebuilds and pushes the Docker image to GHCR
 
 **Note:** The git remote is named `master`, not `origin`.

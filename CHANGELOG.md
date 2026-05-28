@@ -2,6 +2,21 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.0.0](https://github.com/schmiddim/freecad-action/releases/tag/v3.0.0) - 2026-05-28
+
+Major release with improved documentation and project hygiene.
+
+- Add MIT LICENSE file
+- Rewrite README: badges, "Why?" section, quickstart first, troubleshooting, corrected demo URL
+- Add CONTRIBUTING.md
+- Add CHANGELOG.md
+- Improve aggregator documentation with link to https://freecad-aggregator.fly.dev/
+- Update all schema URLs to v3.0.0
+- Move `Agents.md` and `Architecure.md` to `.github/` (fix typo in filename)
+- Rename `öpcjeosemsatz.FCStd` to `opcje-oemsatz.FCStd`
+- Update project structure documentation (templates in `scripts/templates/`)
+- Update version pinning examples to v3
+
 ## [v2.8.9](https://github.com/schmiddim/freecad-action/releases/tag/v2.8.9) - 2026-05-26
 
 - Fix: add git to Docker image for commit-date sorting
